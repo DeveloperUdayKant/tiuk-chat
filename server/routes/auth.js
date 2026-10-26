@@ -10,9 +10,14 @@ import {
 
 const router = Router();
 
+// Behind Cloudflare (e.g. GoDaddy Node.js Hosting) every request arrives from a CDN address,
+// so key the limits on the visitor IP Cloudflare forwards.
+const clientKey = (req) => (config.isProd && req.get('cf-connecting-ip')) || req.ip;
+
 const limiter = (windowMin, limit, extra = {}) => rateLimit({
   windowMs: windowMin * 60 * 1000,
   limit: config.isProd ? limit : limit * 50, // relaxed locally so tests/seeding don't trip it
+  keyGenerator: clientKey,
   standardHeaders: 'draft-7',
   legacyHeaders: false,
   message: { error: 'rate_limited', message: 'Too many attempts. Please wait a few minutes.' },

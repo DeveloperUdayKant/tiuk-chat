@@ -9,7 +9,7 @@
     "dev:server": "nodemon --watch server --ext js server/index.js",
     "dev:client": "vite",
     "build": "vite build",
-    "start": "node server/index.js",
+    "start": "node server/index.js --production",
     "test:e2e": "node --no-warnings scripts/e2e-smoke.mjs",
     "seed:demo": "node --no-warnings scripts/seed-demo.mjs"
   },
@@ -17,6 +17,9 @@
     "node": ">=18"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.1.0",
+    "@fontsource/montserrat": "^5.1.0",
+    "@vitejs/plugin-react": "^4.3.4",
     "cookie": "^0.7.2",
     "cookie-parser": "^1.4.7",
     "dotenv": "^16.4.7",
@@ -24,20 +27,18 @@
     "express-rate-limit": "^7.4.1",
     "helmet": "^7.2.0",
     "jsonwebtoken": "^9.0.2",
-    "mysql2": "^3.11.5",
-    "socket.io": "^4.8.1"
-  },
-  "devDependencies": {
-    "@fontsource/inter": "^5.1.0",
-    "@fontsource/montserrat": "^5.1.0",
-    "@vitejs/plugin-react": "^4.3.4",
-    "concurrently": "^8.2.2",
     "lucide-react": "^0.460.0",
-    "nodemon": "^3.1.7",
+    "mysql2": "^3.11.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1",
     "vite": "^5.4.11",
     "zustand": "^4.5.5"
-  }
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.7"
+  },
+  "main": "server/index.js"
 }

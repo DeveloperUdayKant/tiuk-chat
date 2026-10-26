@@ -59,6 +59,11 @@ All cryptography runs in the browser via WebCrypto. The server stores and relays
 
 ## Production deployment (e.g. `chat.thisisudaykant.com`)
 
+Step-by-step guides:
+- **GoDaddy Node.js Hosting** (deploys from this GitHub repo): [DEPLOY-GODADDY.md](DEPLOY-GODADDY.md)
+- **Classic cPanel** ("Setup Node.js App", supports a sub-path like `/chat`): [DEPLOY-CPANEL.md](DEPLOY-CPANEL.md)
+- **VPS**: see below
+
 WebCrypto only works in a secure context, so the app **must be served over HTTPS** (localhost is exempt).
 
 ```bash
