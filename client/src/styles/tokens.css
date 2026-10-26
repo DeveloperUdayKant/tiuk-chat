@@ -1,0 +1,101 @@
+/* TIUK design tokens, derived from the Uday Kant mark: charcoal ink + signal orange. */
+:root {
+  --brand: #F57C16;
+  --brand-600: #E06A0A;
+  --brand-700: #B9560A;
+  --brand-50: #FFF4EA;
+  --brand-100: #FFE6D0;
+  --brand-ring: rgba(245, 124, 22, 0.32);
+
+  --ink-900: #111317;
+  --ink-800: #16181D;
+  --ink-700: #1F2329;
+  --ink-600: #2A2F37;
+  --ink-500: #3A404A;
+
+  --font-ui: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-brand: 'Montserrat', 'Inter', system-ui, sans-serif;
+
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+
+  --rail-w: 76px;
+  --sidebar-w: 360px;
+  --info-w: 340px;
+
+  --ease: cubic-bezier(.2, .7, .2, 1);
+
+  /* Light theme */
+  --bg: #F3F4F6;
+  --surface: #FFFFFF;
+  --surface-2: #F7F8FA;
+  --surface-3: #EEF0F3;
+  --hover: #F1F2F5;
+  --active: #FFF4EA;
+  --border: #E5E7EB;
+  --border-strong: #D5D8DE;
+  --text: #16181D;
+  --text-2: #4E5562;
+  --text-3: #868C98;
+  --text-on-brand: #FFFFFF;
+
+  --chat-bg: #F4F5F7;
+  --chat-pattern: rgba(22, 24, 29, 0.035);
+  --bubble-in: #FFFFFF;
+  --bubble-in-text: #16181D;
+  --bubble-in-border: #E8EAEE;
+  --bubble-out: #1F2329;
+  --bubble-out-text: #F5F6F8;
+  --bubble-out-meta: rgba(245, 246, 248, 0.6);
+  --bubble-out-link: #FFB577;
+
+  --success: #16A34A;
+  --danger: #DC2626;
+  --danger-50: #FEF2F2;
+  --warn: #B45309;
+  --warn-50: #FFFBEB;
+
+  --shadow-sm: 0 1px 2px rgba(16, 18, 22, 0.06);
+  --shadow: 0 4px 16px rgba(16, 18, 22, 0.08), 0 1px 3px rgba(16, 18, 22, 0.06);
+  --shadow-lg: 0 24px 64px rgba(16, 18, 22, 0.18), 0 4px 12px rgba(16, 18, 22, 0.08);
+
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --bg: #0E1013;
+  --surface: #15181C;
+  --surface-2: #1A1D22;
+  --surface-3: #22262C;
+  --hover: #1E2227;
+  --active: #2A2016;
+  --border: #252930;
+  --border-strong: #323740;
+  --text: #ECEEF1;
+  --text-2: #A9AFBA;
+  --text-3: #727986;
+
+  --chat-bg: #101215;
+  --chat-pattern: rgba(255, 255, 255, 0.025);
+  --bubble-in: #1D2026;
+  --bubble-in-text: #ECEEF1;
+  --bubble-in-border: #262A31;
+  --bubble-out: #F57C16;
+  --bubble-out-text: #16181D;
+  --bubble-out-meta: rgba(22, 24, 29, 0.62);
+  --bubble-out-link: #16181D;
+
+  --brand-50: #2A1D12;
+  --brand-100: #3A2615;
+  --danger-50: #2A1414;
+  --warn-50: #2A2112;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.55), 0 4px 12px rgba(0, 0, 0, 0.35);
+
+  color-scheme: dark;
+}

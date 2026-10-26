@@ -1,0 +1,43 @@
+{
+  "name": "tiuk-chat",
+  "version": "0.1.0",
+  "private": true,
+  "description": "TIUK Chat: end-to-end encrypted messaging by thisisudaykant.com",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c gray,yellow \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "nodemon --watch server --ext js server/index.js",
+    "dev:client": "vite",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "test:e2e": "node --no-warnings scripts/e2e-smoke.mjs",
+    "seed:demo": "node --no-warnings scripts/seed-demo.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cookie": "^0.7.2",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^7.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.5",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "@fontsource/inter": "^5.1.0",
+    "@fontsource/montserrat": "^5.1.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^8.2.2",
+    "lucide-react": "^0.460.0",
+    "nodemon": "^3.1.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "socket.io-client": "^4.8.1",
+    "vite": "^5.4.11",
+    "zustand": "^4.5.5"
+  }
+}
